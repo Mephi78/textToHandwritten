@@ -26,7 +26,12 @@ def getpage():
         exit()
 
 def savepage():
-    path = "final\\done"
+    """Save output to PNG file."""
+    # TODO set path to output/ dir
+    # TODO make dir if not existing
+    # TODO set img name
+    # TODO save img to output dir
+    path = "done"
     i = 1
     while os.path.exists(path + str(i) + ".png"):
         i += 1
@@ -47,8 +52,11 @@ def pasteimg(case, start, height):
     return start
 
 def getname(letter):
+    """Lookup file name of handwritten letter."""
     if letter.isupper():
         letter = "c" + letter.lower()
+    # TODO optimize elif with global lookup dict and for loop
+    # for original, translation in lookup_dir letter=letter.replace(original, translation)
     elif letter == ",":
         letter = "coma"
     elif letter == ".":
