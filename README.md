@@ -6,6 +6,8 @@
 
 # TextToHandwritten
 
+![showcase](textToWord.jpg)
+
 </div>
 
 <!-- ToC -->
@@ -25,7 +27,7 @@
 
 ## Usage
 
-Install [Pillow][pil]  
+Install [Pillow][pil].  
 
 ```bash
 $ cd path/to/your/project
@@ -35,7 +37,7 @@ $ pip3 install pillow
 ```
 
 Paste your text into `MyText.txt` and save the file.  
-Run the program `$ python3 maincode.py`.
+Run the program `$ python3 maincode.py`.  
 
 <p align="right"><a href="#top">top ^</a></p>
 
