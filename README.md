@@ -52,7 +52,3 @@ python3 -m pip install Pillow
 
         
 ### > Refer the `myfont` directory for more help
-
-## Updates
-
-1. Need help to add tables in Output
