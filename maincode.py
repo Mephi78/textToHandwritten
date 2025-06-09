@@ -47,46 +47,33 @@ def pasteimg(case, start, height):
     return start
 
 def getname(letter):
+    symbol_map = {
+        ",": "coma",
+        ".": "fs",
+        "?": "que",
+        "<": "ang1",
+        ">": "ang2",
+        "{": "cur1",
+        "}": "cur2",
+        ":": "colon",
+        "/": "div",
+        "-": "sub",
+        "(": "par1",
+        ")": "par2",
+        "[": "sqr1",
+        "]": "sqr2",
+        "*": "star",
+        "=": "equal",
+        "+": "plus",
+        "$": lambda: "dol" + str(random.randint(1, 2)),
+        '"': "quo"
+    }
+
     if letter.isupper():
-        letter = "c" + letter.lower()
-    elif letter == ",":
-        letter = "coma"
-    elif letter == ".":
-        letter = "fs"
-    elif letter == "?":
-        letter = "que"
-    elif letter == "<":
-        letter = "ang1"
-    elif letter == ">":
-        letter = "ang2"
-    elif letter == "{":
-        letter = "cur1"
-    elif letter == "}":
-        letter = "cur2"
-    elif letter == ":":
-        letter = "colon"
-    elif letter == "/":
-        letter = "div"
-    elif letter == "-":
-        letter = "sub"
-    elif letter == "(":
-        letter = "par1"
-    elif letter == ")":
-        letter = "par2"
-    elif letter == "[":
-        letter = "sqr1"
-    elif letter == "]":
-        letter = "sqr2"
-    elif letter == "*":
-        letter = "star"
-    elif letter == "=":
-        letter = "equal"
-    elif letter == "+":
-        letter = "plus"
-    elif letter == "$":
-        letter = "dol" + str((random.randint(1, 2)))
-    elif letter == '"':
-        letter = "quo"
+        return "c" + letter.lower()
+    elif letter in symbol_map:
+        mapped = symbol_map[letter]
+        return mapped() if callable(mapped) else mapped
     return letter
 
 def getwordpix(word):
