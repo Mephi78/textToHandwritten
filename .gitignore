@@ -1,0 +1,10 @@
+# ### PYTHON
+# compiled bytecode
+__pycache__/
+
+# virtual environment
+venv/
+.venv/
+
+# temp files
+output/
