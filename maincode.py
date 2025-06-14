@@ -201,4 +201,5 @@ def extract():
     except Exception as e:
         print(e)
 
-extract()
+if __name__ == "__main__":
+    extract()
